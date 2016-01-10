@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "onchange 'test/*.js' './index.js' -- node test/sequenced.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/aequanimitas/tresdin#readme",
   "devDependencies": {
+    "onchange": "^2.0.0",
     "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "sinon": "^1.17.2"
   }
 }
